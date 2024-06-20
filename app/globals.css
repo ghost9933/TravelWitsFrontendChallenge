@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Ensure the gradient properties are correctly defined in your Tailwind config */
+    @apply bg-gradient-to-b from-start to-end;
+    color: #333; /* Corrected for readability - Assuming you want dark grey/black text */
+    font-family: 'Arial', sans-serif;
+  }
+
+  input, select {
+    @apply p-2 my-1 border border-gray-300 rounded; /* Ensure 'rounded-custom' is defined or use 'rounded' */
+  }
+
+  button {
+    @apply cursor-pointer px-4 py-2 rounded-lg bg-custom-blue text-white ml-1 transition-colors;
+  }
+
+  button:hover {
+    background-color: theme('colors.custom-dark-blue');
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* Used for custom properties if needed elsewhere */
+  }
+
+  body {
+    @apply bg-gradient-to-b from-start-dark to-end-dark;
+    color: #f3eeee; /* Slightly off-white for contrast in dark mode */
+  }
+}
+/* Assuming you're using Tailwind, but similar styles can be applied with plain CSS */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust the gap as needed */
+  padding: 10px;
+  background-color: #fff; /* Ensure this contrasts well against your background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+  width: 100%; /* Ensures inputs take up appropriate space */
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

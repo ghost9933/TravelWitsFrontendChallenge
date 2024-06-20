@@ -1,0 +1,9 @@
+/* styles/Home.module.css */
+.page {
+    padding: 20px;
+    max-width: auto;
+    margin: auto;
+    background: white;
+    color: rgb(0, 0, 0);
+  }
+  

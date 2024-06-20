@@ -1,0 +1,183 @@
+/* styles/SearchBox.module.css */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  gap: 1%;
+}
+
+.searchInput {
+  flex: 0 0 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.filters {
+  display: flex;
+  flex: 0 0 40%;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.dropdown {
+  flex: 1;
+  position: relative;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownContent {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+  display: block;
+  left: 0;
+  top: 100%;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+
+.resultItem {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.resultItem:last-child {
+  border-bottom: none;
+}
+
+.noResults {
+  padding: 10px;
+  color: #666;
+  text-align: center;
+}
+
+
+
+.movieHeader {
+  display: flex;
+  justify-content: space-between; /* Keeps title and genre spaced apart */
+  align-items: center;
+}
+
+.movieTitle {
+  font-weight: bold;
+  flex: 1; /* Allows the title to fill the space */
+}
+
+.movieGenre {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.movieRating {
+  display: flex;
+  justify-content: flex-start; /* Aligns stars to the start */
+  margin-top: 4px; /* Adds a small gap above the stars */
+}
+
+/* Additional styles for dropdowns */
+
+
+.dropdown select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000000;
+  -webkit-appearance: none;   /* Removes default Chrome and Safari style */
+  -moz-appearance: none;      /* Removes default Firefox style */
+  appearance: none;           /* Removes default style */
+  background-position: right 10px center;
+  background-size: 12px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+
+}
+
+
+.dropdown {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 5px 5px;
+}
+
+.dropdown-arrow {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000'%3e%3cpolygon points='6 8 10 12 14 8' style='fill:%23000;'/%3e%3c/svg%3e");
+  background-size: cover;
+  transition: transform 0.3s;
+}
+
+.dropdown-arrow.up {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and arrow */
+}
+
+.dropdownContent {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+  display: block;
+  left: 0; /* Align with dropdown */
+  top: 100%; /* Just below the dropdown */
+}
+
+
+
+.results {
+  position: absolute;
+  top: 100%; /* Position directly below the search input */
+  left: 0; /* Align with the left side of the search input */
+  width: 60%; /* Match the width of the search input */
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+
+.dropdownContent label {
+  display: block;
+  margin-bottom: 5px;
+}
